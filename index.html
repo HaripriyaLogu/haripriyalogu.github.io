@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haripriya Loganadhan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family: 'Playfair Display', serif;
+  background: url('sketch-bg.jpeg');
+  background-size: cover;
+  color:#3a2e2a;
+  overflow-x:hidden;
+}
+
+/* CURTAIN */
+.curtain {
+  position:fixed;
+  top:0;
+  width:50%;
+  height:100%;
+  background:#2c2c2c;
+  z-index:9999;
+}
+
+.left { left:0; }
+.right { right:0; }
+
+.open-left {
+  animation: openLeft 1.5s ease forwards;
+}
+
+.open-right {
+  animation: openRight 1.5s ease forwards;
+}
+
+@keyframes openLeft {
+  to { transform: translateX(-100%); }
+}
+
+@keyframes openRight {
+  to { transform: translateX(100%); }
+}
+
+header {
+  display:flex;
+  justify-content:flex-end;
+  padding:25px 60px;
+}
+
+.icons img {
+  width:28px;
+  margin-left:25px;
+  transition:0.3s;
+}
+
+.icons img:hover {
+  transform:scale(1.2);
+}
+
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:60px 40px;
+  gap:50px;
+}
+
+.hero img {
+  width:320px;
+  height:auto;
+  border-radius:20px;
+  box-shadow:0 6px 25px rgba(0,0,0,0.25);
+}
+
+.name {
+  font-family: 'Great Vibes', cursive;
+  font-size:60px;
+  margin-bottom:25px;
+}
+
+.hero-text {
+  max-width:520px;
+}
+
+.hero-text p {
+  font-size:18px;
+  line-height:1.6;
+}
+
+.cards {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:40px;
+  flex-wrap:wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.75);
+  padding:28px;
+  border-radius:16px;
+  width:220px;
+  text-align:center;
+  cursor:pointer;
+  border:1px solid #d6cfc9;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:scale(1.08);
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CURTAIN -->
+<div id="leftCurtain" class="curtain left"></div>
+<div id="rightCurtain" class="curtain right"></div>
+
+<header>
+  <div class="icons">
+    <a href="mailto:haripriyaloganathan25@gmail.com">
+      <img src="gmail.png">
+    </a>
+    <a href="https://linkedin.com/in/haripriya2" target="_blank">
+      <img src="linkedin.png">
+    </a>
+    <a href="https://github.com/HaripriyaLogu" target="_blank">
+      <img src="github.png">
+    </a>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="Profile.JPEG">
+
+  <div class="hero-text">
+    <div class="name">Haripriya Loganadhan</div>
+
+    <p>
+      Associate Software Engineer specializing in Python automation and Linux systems, with a growing focus on Artificial Intelligence and data engineering.
+Experienced in building automation solutions, analyzing system performance, and developing predictive models to improve operational efficiency. Passionate about designing scalable, data-driven applications that solve real-world problems.
+Outside of tech, I explore creativity through pencil sketching and traveling.
+      <br><br>
+      Outside of tech, I explore creativity through pencil sketching and traveling.
+    </p>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card" onclick="location.href='Project.html'">
+    <h3>Projects</h3>
+  </div>
+
+  <div class="card" onclick="location.href='linux.html'">
+    <h3>Linux</h3>
+  </div>
+
+  <div class="card" onclick="location.href='art.html'">
+    <h3>Art</h3>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Haripriya</p>
+</footer>
+
+<script>
+window.onload = function() {
+  const visited = sessionStorage.getItem("visited");
+
+  const left = document.getElementById("leftCurtain");
+  const right = document.getElementById("rightCurtain");
+
+  if (!visited) {
+    left.classList.add("open-left");
+    right.classList.add("open-right");
+    sessionStorage.setItem("visited", "true");
+  } else {
+    left.style.display = "none";
+    right.style.display = "none";
+  }
+};
+</script>
+
+</body>
+</html>

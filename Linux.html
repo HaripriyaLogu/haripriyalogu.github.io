@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux - Haripriya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+/* BACKGROUND */
+body {
+  margin:0;
+  font-family:'Playfair Display', serif;
+  background: url('linux-bg.JPEG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color:#3a2e2a;
+}
+
+/* OVERLAY */
+body::before {
+  content:"";
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.65);
+  z-index:-1;
+}
+
+/* CONTAINER */
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:40px;
+}
+
+/* TITLE */
+h1 {
+  text-align:center;
+  font-size:50px;
+  margin-bottom:40px;
+}
+
+/* SECTION */
+.section {
+  background:rgba(255,255,255,0.85);
+  padding:25px;
+  border-radius:16px;
+  margin-bottom:25px;
+  border:1px solid #d6cfc9;
+
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+
+/* TEXT */
+h2 {
+  font-size:26px;
+}
+
+h3 {
+  font-size:20px;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+p {
+  font-size:17px;
+  line-height:1.7;
+}
+
+/* LIST */
+ul {
+  margin-top:10px;
+  padding-left:20px;
+}
+
+/* CODE BLOCK */
+pre {
+  background:#1e1e1e;
+  color:#fff;
+  padding:15px;
+  border-radius:10px;
+  overflow:auto;
+  font-size:14px;
+}
+
+/* BACK BUTTON */
+.back {
+  display:block;
+  text-align:center;
+  margin-top:30px;
+  text-decoration:none;
+  color:#000;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Linux</h1>
+
+  <!-- INTRO -->
+  <div class="section">
+    <h2>Introduction</h2>
+    <p>
+      Linux is a powerful and widely used operating system known for its stability, security, and flexibility.
+      It is commonly used in servers, cloud environments, and development systems.Linux is an open-source operating system based on Unix architecture.
+      It manages hardware resources and provides a platform to run applications efficiently.Linux is preferred for its performance, security, and scalability.
+      It is widely used in servers, DevOps, and cloud computing environments. Linux provides performance, automation, and scalability required for handling large datasets
+      and complex machine learning workflows. 
+
+
+    </p>
+  
+  <!-- AI SECTION -->
+  <div class="section">
+    <h2>Linux in AI & Machine Learning</h2>
+
+    <h3>What is Linux in AI?</h3>
+    <p>
+      Linux acts as the backbone of AI systems where data processing, model training,
+      and deployment are performed efficiently.
+    </p>
+
+    <h3>Why Linux for AI?</h3>
+    <p>
+      Linux provides performance, automation, and scalability required for handling large datasets
+      and complex machine learning workflows.
+    </p>
+
+    <h3>How Linux is Used</h3>
+    <p>
+      Linux is used to manage pipelines, train models, and deploy applications in production.
+    </p>
+
+  
+    <h3>Cloud Usage</h3>
+    <p>
+      Used in AWS, Azure, and Google Cloud for deploying AI applications.
+    </p>
+  </div>
+
+  <!-- REAL EXAMPLE -->
+  <div class="section">
+    <h2>Example: How Linux is Used in AI</h2>
+
+    <h3>Step 1: Data Processing</h3>
+    <p>
+      Commands like grep, awk, and sed are used to clean and filter data.
+    </p>
+
+    <h3>Step 2: Model Training</h3>
+    <p>
+      AI models are trained using Python frameworks with GPU support.
+    </p>
+
+    <h3>Step 3: Automation</h3>
+    <p>
+      Shell scripts automate training and execution workflows.
+    </p>
+
+    <h3>Step 4: Deployment</h3>
+    <p>
+      Models are deployed on Linux servers using Docker and cloud tools.
+    </p>
+
+    <h3>Step 5: Monitoring</h3>
+    <p>
+      System performance and logs are monitored using Linux tools.
+    </p>
+  </div>
+<div class="section">
+
+  <h2>Linux Automation Project</h2>
+
+  <p>
+    I developed an end-to-end automation script using Python in a Linux environment to process 
+    large Excel datasets and generate structured reports. The solution was executed within a 
+    virtual environment (venv), demonstrating practical experience in Linux-based automation, 
+    data processing, and scripting.
+  </p>
+
+  <h3>Problem Statement</h3>
+  <p>
+    Manual processing of multiple Excel sheets containing server data was time-consuming, repetitive, 
+    and prone to human error. The objective was to automate the extraction, filtering, and report 
+    generation process specifically for Linux-based systems.
+  </p>
+
+  <h3>Solution</h3>
+  <p>
+    Using Python (Pandas), I designed an automation workflow that:
+  </p>
+
+  <ul>
+    <li>Filters Linux servers from multiple sheets (N Line, N+1, Production)</li>
+    <li>Identifies and processes relevant system data dynamically</li>
+    <li>Generates structured <b>Check list</b> and <b>Repo list</b> reports</li>
+    <li>Splits reports based on patch windows for better operational handling</li>
+    <li>Exports multiple automated Excel files with organized sheets</li>
+  </ul>
+
+  <h3>Linux Usage</h3>
+  <p>
+    The automation was executed entirely in a Linux environment using virtual environments (venv). 
+    Linux command-line tools were used for environment setup, dependency management, and script execution, 
+    enabling efficient and scalable automation workflows.
+  </p>
+
+  <h3>Key Highlights</h3>
+  <ul>
+    <li>Automated multi-sheet Excel processing</li>
+    <li>Dynamic column detection using pattern matching</li>
+    <li>Scalable report generation for multiple environments</li>
+    <li>Reduced manual effort and improved accuracy</li>
+  </ul>
+
+  <h3>Execution in Linux</h3>
+
+  <pre>
+# Step 1: Create virtual environment
+python3 -m venv myenv
+
+# Step 2: Activate environment
+source myenv/bin/activate
+
+# Step 3: Install dependencies
+pip install pandas openpyxl
+
+# Step 4: Run automation script
+python automation.py
+  </pre>
+</div>
+
+  <!-- BACK -->
+  <a href="index.html" class="back">⬅ Back to Home</a>
+
+
+  </div>
+<script>
+function openTab(tabName) {
+  let tabs = document.getElementsByClassName("tab-content");
+  for (let t of tabs) {
+    t.classList.remove("active");
+  }
+  document.getElementById(tabName).classList.add("active");
+}
+</script>
+
+</body>
+</html>
